@@ -1,0 +1,44 @@
+[
+    {
+        "name": "gwpGetiModel",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "getGWP",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "putGWP",
+        "private": false,
+        "can_evaluate": {
+            "%%user.data.email": {
+                "$in": [
+                    "glen.worrall@bentley.com"
+                ]
+            }
+        },
+        "disable_arg_logs": true
+    },
+    {
+        "name": "authenticate",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "checkUser",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "getEPDMapping",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "getAllEPD",
+        "private": false,
+        "disable_arg_logs": true
+    }
+]

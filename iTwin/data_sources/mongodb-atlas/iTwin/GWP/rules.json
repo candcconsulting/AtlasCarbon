@@ -1,0 +1,44 @@
+{
+    "collection": "GWP",
+    "database": "iTwin",
+    "roles": [
+        {
+            "name": "readAndWrite",
+            "apply_when": {},
+            "read": true,
+            "write": true,
+            "insert": true,
+            "delete": true,
+            "search": true
+        },
+        {
+            "name": "readAll",
+            "apply_when": {},
+            "read": true,
+            "write": false,
+            "insert": false,
+            "delete": false,
+            "search": true
+        },
+        {
+            "name": "readAndWriteAll",
+            "apply_when": {
+                "author": {
+                    "$eq": {
+                        "%function": {
+                            "name": "checkUser",
+                            "arguments": [
+                                "%%user.name"
+                            ]
+                        }
+                    }
+                }
+            },
+            "read": true,
+            "write": true,
+            "insert": true,
+            "delete": true,
+            "search": true
+        }
+    ]
+}
